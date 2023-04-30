@@ -1,9 +1,12 @@
 {
+    "python.formatting.provider": "black",
     "editor.rulers": [
         80,
         90,
         100
     ],
     "files.autoSave": "onFocusChange",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true
 }
