@@ -15,7 +15,7 @@ export PATH=$PATH:~/.local/bin:~/.local/nvim-linux64/bin
 export FZF_DEFAULT_COMMAND='fdfind --type f'
 export FZF_CTRL_T_OPTS="
   --walker-skip .git
-  --preview 'batcat -n --color=always {}'
+  --preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(99%|)'"
 export FZF_ALT_C_OPTS="
   --walker-skip .git
