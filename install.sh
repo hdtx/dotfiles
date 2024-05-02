@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 cd
+mkdir -p .local/bin
 # install packages
-sudo apt install -y git tmux make curl gcc
+sudo apt install -y git tmux make curl wget gcc
 # liquidprompt
 git clone --branch stable https://github.com/nojhan/liquidprompt.git ~/liquidprompt
 # fzf
@@ -47,6 +48,11 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 rm nvim-linux64.tar.gz
 echo "please run :LazyHealth after starting nvim"
+
+# lazygit ######################################################################################################################################
+curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | rg "url.*Linux_x86_64" | cut -d : -f 2,3 | tr -d \" | wget -i -
+tar -xvzf lazygit_*_Linux_x86_64.tar.gz -C .local/bin lazygit
+rm lazygit_*_Linux_x86_64.tar.gz
 
 # rc file
 echo "source ~/dotfiles/.mybashrc" >> .bashrc
