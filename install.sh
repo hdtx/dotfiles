@@ -5,10 +5,10 @@ mkdir -p .local/bin
 # install packages
 sudo apt install -y git tmux make curl wget gcc
 # liquidprompt
-git clone --branch stable https://github.com/nojhan/liquidprompt.git ~/liquidprompt
+git clone --branch stable https://github.com/nojhan/liquidprompt.git ~/.local/liquidprompt
 # fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --no-zsh --no-fish --no-update-rc --key-bindings --completion
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.local/fzf
+~/.local/fzf/install --no-zsh --no-fish --no-update-rc --key-bindings --completion
 # rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source ~/.cargo/env
