@@ -31,7 +31,7 @@ sudo cp ~/.local/kitty.app/share/applications/kitty.desktop /usr/share/applicati
 sudo sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" /usr/share/applications/kitty*.desktop
 sudo sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" /usr/share/applications/kitty*.desktop
 # Use JetBrains Mono
-curl -LO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/v3.2.1/JetBrainsMono.zip
+curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | rg "download_url.*JetBrainsMono.zip" | cut -d : -f 2,3 | tr -d \" | wget -i -
 unzip JetBrainsMono.zip -d nerd-fonts
 sudo mv nerd-fonts/*.ttf /usr/share/fonts/opentype/
 fc-cache -fv
@@ -50,7 +50,7 @@ rm nvim-linux64.tar.gz
 echo "please run :LazyHealth after starting nvim"
 
 # lazygit ######################################################################################################################################
-curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | rg "url.*Linux_x86_64" | cut -d : -f 2,3 | tr -d \" | wget -i -
+curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | rg "download_url.*Linux_x86_64" | cut -d : -f 2,3 | tr -d \" | wget -i -
 tar -xvzf lazygit_*_Linux_x86_64.tar.gz -C .local/bin lazygit
 rm lazygit_*_Linux_x86_64.tar.gz
 
