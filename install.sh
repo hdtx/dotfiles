@@ -49,4 +49,4 @@ rm nvim-linux64.tar.gz
 echo "please run :LazyHealth after starting nvim"
 
 # rc file
-echo "source ~/dotfiles/.mybashrc" >>.bashrc
+echo "source ~/dotfiles/.mybashrc" >> .bashrc
