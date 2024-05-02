@@ -24,7 +24,7 @@ export FZF_ALT_C_OPTS="
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Only load Liquidprompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+[[ $- = *i* ]] && source ~/.local/liquidprompt/liquidprompt
 
-source ~/liquidprompt/themes/powerline/powerline.theme
+source ~/.local/liquidprompt/themes/powerline/powerline.theme
 lp_theme powerline_full
