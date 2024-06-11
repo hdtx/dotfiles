@@ -28,3 +28,4 @@ export FZF_ALT_C_OPTS="
 
 source ~/.local/liquidprompt/themes/powerline/powerline.theme
 lp_theme powerline_full
+export LP_ENABLE_TIME=1
