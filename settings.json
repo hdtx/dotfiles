@@ -1,0 +1,36 @@
+// VSCode
+{
+    "editor.rulers": [
+        80,
+        90,
+        100
+    ],
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true,
+    "[python]": {
+        // "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.minimap.showSlider": "always",
+    "tailwindCSS.experimental.classRegex": [
+        "class: \"(.*)\""
+    ],
+    "tailwindCSS.includeLanguages": {
+        "rust": "html"
+    },
+    "git.path": "",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "window.dialogStyle": "custom",
+    "window.titleBarStyle": "custom",
+    "notebook.output.scrolling": true,
+    "security.allowedUNCHosts": [
+        "diskstation"
+    ],
+}
