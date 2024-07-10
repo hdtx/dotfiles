@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
+export DFDIR=$(pwd)
 cd
 mkdir -p .local/bin
 # install packages
 sudo apt install -y git tmux make curl wget gcc
+# add global excludes
+cp $DFDIR/.global_git_ignore ~/.local
+git config --global core.excludesFile ~/.local/.global_git_ignore
 # liquidprompt
 git clone --branch stable https://github.com/nojhan/liquidprompt.git ~/.local/liquidprompt
 # fzf
