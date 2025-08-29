@@ -25,15 +25,15 @@ cargo binstall --no-confirm bat
 cargo binstall --no-confirm fd-find
 
 # kitty #########################################################################################################################################
-# curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 # Create symbolic links to add kitty and kitten to PATH (assuming ~/.local/bin is in
 # your system-wide PATH)
-# ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
+ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
 # Place the kitty.desktop file somewhere it can be found by the OS
-# sudo cp ~/.local/kitty.app/share/applications/kitty.desktop /usr/share/applications/
+sudo cp ~/.local/kitty.app/share/applications/kitty.desktop /usr/share/applications/
 # Update the paths to the kitty and its icon in the kitty desktop file(s)
-# sudo sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" /usr/share/applications/kitty*.desktop
-# sudo sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" /usr/share/applications/kitty*.desktop
+sudo sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" /usr/share/applications/kitty*.desktop
+sudo sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" /usr/share/applications/kitty*.desktop
 # Use JetBrains Mono
 curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | rg "download_url.*JetBrainsMono.zip" | cut -d : -f 2,3 | tr -d \" | wget -i -
 unzip JetBrainsMono.zip -d nerd-fonts
@@ -42,21 +42,21 @@ fc-cache -fv
 rm -rf nerd-fonts
 rm JetBrainsMono.zip
 # Use my config
-# ln -fs ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
+ln -fs ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
 # neovim #######################################################################################################################################
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
-sudo tar -C .local -xzf nvim-linux-x86_64.tar.gz
+#curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+#sudo tar -C .local -xzf nvim-linux-x86_64.tar.gz
 # lazyvim
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
-rm nvim-linux-x86_64.tar.gz
-echo "please run :LazyHealth after starting nvim"
+#git clone https://github.com/LazyVim/starter ~/.config/nvim
+#rm -rf ~/.config/nvim/.git
+#rm nvim-linux-x86_64.tar.gz
+#echo "please run :LazyHealth after starting nvim"
 
 # lazygit ######################################################################################################################################
-curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | rg "download_url.*Linux_x86_64" | cut -d : -f 2,3 | tr -d \" | wget -i -
-tar -xvzf lazygit_*_Linux_x86_64.tar.gz -C .local/bin lazygit
-rm lazygit_*_Linux_x86_64.tar.gz
+#curl -s https://api.github.com/repos/jesseduffield/lazygit/releases/latest | rg "download_url.*Linux_x86_64" | cut -d : -f 2,3 | tr -d \" | wget -i -
+#tar -xvzf lazygit_*_Linux_x86_64.tar.gz -C .local/bin lazygit
+#rm lazygit_*_Linux_x86_64.tar.gz
 
 # rc file
 echo "source ~/dotfiles/.mybashrc" >> .bashrc
