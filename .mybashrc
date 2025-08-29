@@ -1,3 +1,6 @@
+# kitty sudo fix
+export TERM=xterm-256color
+
 export MANPAGER="sh -c 'bat -l man -p'"
 alias nv=nvim
 alias x='xxd -R always -c 64'
