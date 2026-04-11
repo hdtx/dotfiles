@@ -1,0 +1,26 @@
+# ZSH_THEME="jonathan"
+# plugins=(git)
+
+export MANPAGER="sh -c 'bat -l man -p'"
+alias x='xxd -R always -c 64'
+
+alias ll='eza --long --group --all --links --sort=type'
+alias lt='eza --long --group --all --links --tree'
+alias lt1='eza --long --group --all --links --tree --level=1'
+alias lt2='eza --long --group --all --links --tree --level=2'
+alias lt3='eza --long --group --all --links --tree --level=3'
+alias lt4='eza --long --group --all --links --tree --level=4'
+alias lt5='eza --long --group --all --links --tree --level=5'
+
+export PATH=~/.local/bin:$PATH
+
+export FZF_DEFAULT_COMMAND='fdfind --type f'
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(99%|)'"
+export FZF_ALT_C_OPTS="
+  --walker-skip .git
+  --preview 'tree -C {} | head -200'"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
