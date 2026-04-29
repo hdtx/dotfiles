@@ -26,6 +26,14 @@ cargo binstall --no-confirm eza
 cargo binstall --no-confirm ripgrep
 cargo binstall --no-confirm bat
 cargo binstall --no-confirm fd-find
+cargo binstall --no-confirm procs
+cargo binstall --no-confirm du-dust
+cargo binstall --no-confirm bandwhich
+cargo binstall --no-confirm zoxide
+cargo binstall --no-confirm starship
+cargo binstall --no-confirm just
+
+brew install btop
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
